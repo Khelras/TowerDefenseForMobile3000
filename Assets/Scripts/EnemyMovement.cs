@@ -9,8 +9,19 @@ public class EnemyMovement : MonoBehaviour
     // private int to keep track of the current waypoint index
     private int m_currentWaypoint = 0;
 
+    public void SetWaypoints(Transform[] waypoints)
+    {
+        m_waypoints = waypoints;
+        m_currentWaypoint = 0; // Reset the current waypoint index when new waypoints are set
+    }
+
     private void Update()
     {
+        if (m_waypoints == null || m_waypoints.Length == 0)
+        {
+            return; // No waypoints to follow
+        }
+
         if (m_currentWaypoint >= m_waypoints.Length)
         {
             Destroy(gameObject); // Destroy the enemy if it has reached the last waypoint

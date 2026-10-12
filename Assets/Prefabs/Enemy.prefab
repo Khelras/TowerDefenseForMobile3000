@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5607108221830592429}
   - component: {fileID: 5719491653619724609}
   - component: {fileID: 6617838923287134904}
+  - component: {fileID: 887116375385296870}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -111,3 +112,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &887116375385296870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7227971337059615006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae32be85981beb43b70e00023b37653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+  m_waypoints: []
+  m_speed: 2
