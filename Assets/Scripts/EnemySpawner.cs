@@ -16,6 +16,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float m_spawnInterval = 2f; // Time interval between enemy spawns
     [SerializeField] private float m_timeBetweenWaves = 5f; // Time interval between waves
 
+    // Reference to the player's base health
+    [SerializeField] private BaseHealth m_playerBase;
+
     private int m_currentWave = 0; // Current wave number
     private int m_enemiesToSpawn = 0; // Number of enemies to spawn in the current wave
     private int m_spawnedEnemies = 0; // Number of enemies spawned in the current wave
@@ -107,6 +110,7 @@ public class EnemySpawner : MonoBehaviour
 
         // Set the waypoints for the enemy to follow
         movement.SetWaypoints(m_waypoints);
+        movement.SetBase(m_playerBase);
 
         // -- Add EnemyWaveTracker component to the spawned enemy if it doesn't already have one -- //
         EnemyWaveTracker tracker = enemy.GetComponent<EnemyWaveTracker>();
