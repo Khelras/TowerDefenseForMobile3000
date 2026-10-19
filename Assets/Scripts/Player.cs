@@ -1,7 +1,6 @@
-using UnityEditor;
 using UnityEngine;
 
-public class BaseHealth : MonoBehaviour
+public class Player : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
 
@@ -34,7 +33,7 @@ public class BaseHealth : MonoBehaviour
         m_currentHealth -= damage;
         m_currentHealth = Mathf.Max(m_currentHealth, 0); // Ensure health doesn't go below 0
 
-        Debug.Log("BaseHealth: " + gameObject.name + " took " + damage + " damage. Current health: " + m_currentHealth);
+        Debug.Log("Player: " + gameObject.name + " took " + damage + " damage. Current health: " + m_currentHealth);
 
         if (m_currentHealth <= 0)
         {
