@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyHealthTester : MonoBehaviour
 {
     // damage amount to apply to the enemy
-    [SerializeField] private float damageAmount = 50f;
+    [SerializeField] private float damageAmount = 6f;
 
     private void Update()
     {
